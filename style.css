@@ -1,0 +1,60 @@
+body {
+  font-family: 'Pretendard', sans-serif;
+  background: #f8f8f8;
+  color: #333;
+  padding: 40px;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 30px;
+  color: #444;
+}
+
+.input-area {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.input-area input {
+  padding: 12px 14px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  min-width: 180px;
+}
+
+.preview-box {
+  background: #fff;
+  padding: 30px;
+  border-radius: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  transition: background-color 0.3s ease;
+}
+
+.menu-item {
+  margin-bottom: 20px;
+  text-align: left;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.menu-item strong {
+  font-size: 1.3rem;
+  display: block;
+  margin-bottom: 4px;
+  color: #222;
+}
+
+.empty-msg {
+  color: #aaa;
+  font-style: italic;
+}
