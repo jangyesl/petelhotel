@@ -3,9 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> 예약 가이드 </title>
+    <title> 예약 가이드 팁 </title>
+
+    <style>
+
+        .intro2-split-section{
+             display: flex;
+             object-fit: cover;
+             padding: 40px 40px;
+        }
+        
+        .review{ /*가로 정렬*/
+            display: flex;
+            object-fit: cover;
+         }
+
+        .image-box{
+            width: 50;
+            height: 200px;
+        }
+        .text-box{
+            width: 50;
+            height: 200px;
+        }
+        img {
+            width: 400px;      /* 원하는 너비 */
+            height: 300px;     /* 원하는 높이 */
+            object-fit: cover; /* 비율 안 깨지고 가운데 잘라줌 */
+            border-radius: 10px; /* (선택) 둥글게 처리 */
+            }
+
+
+    </style>
 </head>
-<body>
-    <h2> 애견 호텔 예약 가이드 팁 </h2>
+<body> 
+
+    <header class ="main-banner">
+       <section class="intro2-split-section"> <!--구역나누기 위해-->
+        <div class="image-box">
+        <img src="images/banner-dog1.jpg" alt="배너1" />
+        </div>
+
+        <div class="text-box">
+        <h1>   애견 호텔 예약 가이드 팁 글자 더 크게</h1>
+        <p>     소중한 반려견을 위한 신중한 선택, 믿을 수 있는 공간에서 시작해보세요. </p>
+        </div>
+
+       
+    </section>
+
+    </header>
+
+    <!-- <section class="intro2-split-section">
+
+        <div class="image-box">
+        <img src="images/petel_guide.png" alt="펫텔가이드" />
+        </div>
+
+        <div class="text-box">
+            <h1>   애견 호텔 예약 가이드 팁 글자 더 크게</h1>
+        <p>     소중한 반려견을 위한 신중한 선택, 믿을 수 있는 공간에서 시작해보세요. </p>      
+            <pre>
+                애견 호텔은 일반 호텔과는 다르게 반려견의 식사, 놀이, 운동, 안전관리 등 세심하게 신경써야 하므로 
+                호텔 선택시 꼼꼼한 비교와 예약이 필요합니다.
+                내 강아지만을 위한 체계적인 돌봄 서비스 제공 하여 
+                보호자가 안심하고 일정을 소화할 수 있도록
+                애견 호텔을 선택하는 방법, 예약 전 확인해야 할 사항을 기반으로 
+                낯선 곳에서도 안심할 수 있는 작은 쉼터를 예약하세요.
+                소중한 반려견을 위한 체계적인 맞춤 식사와 건강 체크 서비스까지
+                체크인 순간부터 따뜻한 케어가 시작됩니다.
+            </pre>
+        </div>       
+    </section> -->
+
+
+     <section class="review">      
+
+        <!--
+        <div class="review">
+            <img src="images/dog-review1.jpg" alt="리뷰1" />
+            <img src="images/dog-review2.jpg" alt="리뷰2" />
+            <img src="images/dog-review3.jpg" alt="리뷰3" />         
+        </div> -->
+
+    <div class="luxury"> 
+        <figure class="review-card big">
+        <img src="images/luxury.jpg" alt="luxury" />
+        <figcaption>럭셔리 애견 호텔</figcaption>
+        <a href ='reservation/luxury.html' class="btn"> 》예약 바로가기《</a> 
+    </div>
+
+    <div class="cctv"> 
+        <img src="images/cctv.jpg" alt="cctv" />
+        <figcaption>실시간 cctv 확인 서비스</figcaption>  
+        <a href ='reservation/cctv.html' class="btn"> 》예약 바로가기《</a> 
+        </figure>        
+    </div>
+
+    <div class="smallgroup"> 
+        <figure class="smallgroup">
+        <img src="images/smallgroup.jpg" alt="smallgroup" />
+        <a href ='reservation/smallgroup.html' class="btn"> 》예약 바로가기《</a>
+        <figcaption>소규모 전용 서비스</figcaption>
+
+        <img src="images/fun.jpg" alt="fun" />
+        <figcaption>재미와 놀이의 공간</figcaption>
+        <a href ='reservation/fun.html' class="btn"> 》예약 바로가기《</a>    
+        </figure>        
+    </div>
+
+        <div class="health"> 
+        <figure class="health">
+        <img src="images/health.PNG" alt="health" />
+        <figcaption>건강 상태 맞춤 공간</figcaption>
+         <a href ='reservation/health.html' class="btn"> 》예약 바로가기《</a>
+
+        <img src="images/banner-dog2.jpg" alt="singleroom" />
+        <figcaption>소형견. 아기 강아지 전용 1인실 완비</figcaption>    
+        <a href ='reservation/singleroom.html' class="btn"> 》예약 바로가기《</a>
+        </figure>        
+    </div>
+
+    </section>
+    
+
+
 </body>
 </html>

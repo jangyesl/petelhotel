@@ -6,8 +6,166 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> PETEL 반려견을 위한 안심 숙소 찾기</title>
+
+    <style>
+ 
+ .main-banner{ 
+    background-image: url('images/banner-dog1.jpg'); 
+    background-size: cover;      /* 이미지가 영역을 꽉 채우도록 확대 */
+    background-position: center; /*이미지 가운데기준으로 잘나오게함*/
+    height: 500px;
+    display: flex;                /* 안의 글씨를 가운데 정렬하기*/
+    align-items: center;          /* 수직 중앙 정렬 */
+    justify-content: center;      /* 수평 중앙 정렬 */
+    color:white;                /* 글씨 흰색 */
+}
+
+.banner-text {
+    background-color: rgba(0, 0, 0, 0.4); /* 반투명 검정 배경 */
+    padding: 20px 40px;                  /* 안쪽 여백 */
+    border-radius: 10px;                 /* 둥근 테두리 */
+    text-align: center;
+  }
+ /* 버튼 스타일 공통 (예약하기 버튼 등 전부 공통) */
+ .btn-main {
+    display: inline-block;          /* 인라인 요소지만 사이즈 조정 가능하게 */
+    padding: 10px 20px;             /* 버튼 안 여백 */
+    background-color: #1d1b1a;      /* 버튼 배경색 */
+    color: white;                   /* 글씨색 */
+    text-decoration: none;          /* 밑줄 제거 */
+    border-radius: 8px;             /* 둥근 모서리 */
+    font-weight: bold;
+    font-size: 14px;
+ }
+ .btn-main:hover {
+    background-color: #ffa500;
+}
+
+ .btn-sub {
+    display: inline-block;
+    padding: 8px 18px;
+    background-color: #806c6c;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+}
+
+.btn-sub:hover {   /* 마우스 올렸을때 색변경  */
+    background-color: #dba5a5;
+}
+
+.intro-split-section{
+    width: 500;
+    height: 200px;
+    border-radius: 5px;
+    padding: 50px;
+    display: flex;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.intro2-split-section{
+    width: 500;
+    height: 200px;
+    border-radius: 5px;
+    padding: 50px;
+    display: flex;
+    font-size: 14px;
+    font-weight: 500;
+}
+ .review-card{
+
+
+ }
+ .review-grid{
+    display: flex;
+ }
+
+ .review-card-small-container{
+
+
+ }
+
+    </style>
 </head>
 <body>
-    <h2> 반려견을 위한 안심 숙소 찾기 </h2>
+
+    <header class ="main-banner">
+       <!-- 배경으로 넣으려고 css로 ㄱ
+        <img src="images/banner-dog.jpg" alt="반려견 안심숙소 찾기" class="banner-img"/>-->
+
+        <div class="banner-text">
+            <h2> 반려견을 위한 안심 숙소 찾기 </h2>
+            <p> 혼자 있을 때보다 더 행복한 하루를!</p>
+
+            <!--메인 예약하기를 누르면 로그인 화면으로-->
+            <a href="petel_login.html" class="btn-main"> 지금 예약하기</a>  
+        </div>
+    </header>
+
+    <section class="intro-split-section">
+        <div class="text-box">
+        <h2>우리 아이를 위한 작은 호캉스</h2>
+        <p>돌봄이 아닌, 교감 있는 호텔</p>
+        <a href ='실시간타임특가.html' class="btn-sub">실시간 타임특가 예약하기</a>
+        </div>
+
+        <div class="image-box">
+        <img src="images/banner-dog2.jpg" alt="호텔내부 사진"/>
+        </div>
+        
+    </section>
+
+    <section class="intro2-split-section">
+
+        <div class="image-box">
+        <img src="images/banner-dog3.jpg" alt="쉬는 강아지 둘" />
+        </div>
+
+        <div class="text-box">
+        <h2>예약부터 퇴실까지 전 과정 투명하게!</h2>
+        <p> 24시간 CCTV, 안심 모니터링 시스템 운영 중 </p>
+        <a href ='인기순 호텔검색.html' class="btn-sub">인기순으로 예약하기</a>
+        </div>
+
+       
+    </section>
+
+    <section class="review">
+        <h2>안심 숙소 후기</h2>
+        <!--
+        <div class="review">
+            <img src="images/dog-review1.jpg" alt="리뷰1" />
+            <img src="images/dog-review2.jpg" alt="리뷰2" />
+            <img src="images/dog-review3.jpg" alt="리뷰3" />         
+        </div> -->
+
+    <div class="review-grid"> 
+        <figure class="review-card big">
+        <img src="images/review1.jpg" alt="리뷰1" />
+        <figcaption>집처럼 편안하게, 호텔처럼 안전하게.</figcaption>
+        </figure>
+
+        <div class="review-card-small-container"> 
+            <figure class="review-card">
+            <img src="images/review2.jpg" alt="리뷰2" />
+            <figcaption>사랑스러운 몽몽이의 두 번째 집</figcaption>
+            </figure>
+
+            <figure class="review-card">
+            <img src="images/review3.jpg" alt="리뷰3" />
+            <figcaption>지난 일요일 호캉스 후기</figcaption>
+            </figure>
+
+        </div>
+    </div>
+
+    </section>
+    
+
+
 </body>
 </html>
