@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>예약화면</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; }
+    .btn { margin-bottom: 20px; }
+    .room-card {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+    }
+    .btn-back {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #ddd;
+  color: #333;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.btn-back:hover {
+  background-color: #bbb;
+}
+  </style>
+</head>
+<body>
+
+  <h2>예약 가능한 객실</h2>
+  <div id="roomList"></div>
+
+  <a href="../petel_main.html" class="btn-back">← 메인으로 돌아가기</a>
+  
+  <div id="roomList"></div>
+
+  <!-- 아래 자바스크립트는 그대로 -->
+  <script>...</script>
+  <script>
+    const rooms = [
+      { name: "럭셔리 A", price: 90000, popularity: 80 },
+      { name: "펀룸 B", price: 60000, popularity: 95 },
+      { name: "CCTV C", price: 75000, popularity: 70 },
+    ];
+
+    // URL에 따라 정렬 방식 자동 선택
+    const path = location.pathname;
+    let sorted = [];
+
+    if (path.includes("best")) {
+      // 인기순
+      sorted = rooms.sort((a, b) => b.popularity - a.popularity);
+    } else if (path.includes("TimePrice")) {
+      // 최저가순
+      sorted = rooms.sort((a, b) => a.price - b.price);
+    }
+
+    // 화면에 출력
+    const list = document.getElementById("roomList");
+    sorted.forEach(room => {
+      const div = document.createElement("div");
+      div.className = "room-card";
+      div.innerHTML = `<strong>${room.name}</strong><br>가격: ${room.price.toLocaleString()}원<br>인기도: ${room.popularity}`;
+      list.appendChild(div);
+    });
+  </script>
+
+</body>
+</html>
