@@ -9,13 +9,17 @@
 
         .intro2-split-section{
              display: flex;
+             margin-bottom: 20px;
              object-fit: cover;
              padding: 40px 40px;
+             align-items: center;  
         }
         
         .review{ /*가로 정렬*/
             display: flex;
             object-fit: cover;
+            flex-wrap: wrap;
+            gap: 20px;
          }
 
         .image-box{
@@ -23,7 +27,7 @@
             height: 200px;
         }
         .text-box{
-            width: 50;
+            width: 50%;
             height: 200px;
         }
         img {
@@ -86,12 +90,11 @@
             <img src="images/dog-review3.jpg" alt="리뷰3" />         
         </div> -->
 
-    <div class="luxury"> 
-        <figure class="review-card big">
-        <img src="images/luxury.jpg" alt="luxury" />
-        <figcaption>럭셔리 애견 호텔</figcaption>
-        <a href ='reservation/luxury.html' class="btn"> 》예약 바로가기《</a> 
-    </div>
+    <figure class="review-card">
+      <img src="images/luxury.jpg" alt="luxury" />
+      <figcaption>럭셔리 애견 호텔</figcaption>
+      <a href="reservation/luxury.html" class="btn">》예약 바로가기《</a>
+    </figure>
 
     <div class="cctv"> 
         <img src="images/cctv.jpg" alt="cctv" />
