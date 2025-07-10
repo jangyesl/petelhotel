@@ -1,11 +1,104 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PETEL 로그인</title>
+
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #fff; /* 흰 배경 유지 */
+      text-align: center;
+    }
+
+    .container {
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      width: 360px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 24px;
+      color: #333;
+    }
+
+    label {
+      display: block;
+      margin: 12px 0 4px;
+      color: #444;
+      font-weight: bold;
+      text-align: left;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      margin-bottom: 14px;
+      box-sizing: border-box;
+    }
+
+    .btn-sub {
+      display: inline-block;
+      padding: 8px 18px;
+      background-color: #806c6c;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 500;
+      transition: background-color 0.2s ease;
+      text-align: center;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+
+    .btn-sub:hover {
+      background-color: #dba5a5;
+    }
+
+    .btn-link {
+      background: none;
+      border: none;
+      color: #806c6c;
+      cursor: pointer;
+      font-size: 13px;
+      text-decoration: underline;
+    }
+
+ 
+  </style>
 </head>
 <body>
-    
+
+  <div class="container">
+    <h2>로그인</h2>
+    <form action="#">
+      <label for="userId"> 핸드폰번호로 로그인</label>
+      <input type="text" id="userId" name="userId" required>
+
+      <label for="userPw"> 비밀번호</label>
+      <input type="password" id="userPw" name="userPw" required>
+
+      <button type="submit" class="btn-sub">로그인</button>
+    </form>
+
+    <!-- 회원가입 버튼 -->
+    <a href="petel_membership.html" class="btn-link">아직 회원이 아니신가요? 회원가입하기</a>
+  </div>
+
 </body>
 </html>
