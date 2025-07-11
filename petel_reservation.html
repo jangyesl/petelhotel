@@ -3,9 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> 예약현황</title>
+    <title> PETEL 예약하기 화면 체크박스순으로 정렬</title>
 </head>
 <body>
-    <h2> 예약현황 </h2>
+    <h2> 객실 필터 적용하기 </h2>
+
+    <label> <input type="checkbox" class="filter" value="best"> best특가 </label>
+    <label> <input type="checkbox" class="filter" value="cctv"> 실시간 cctv확인업체</label>
+    <label> <input type="checkbox" class="filter" value="fun"> 놀이지도 포함</label>
+    <label> <input type="checkbox" class="filter" value="Health"> 개인 맞춤식 제공</label>
+    <label> <input type="checkbox" class="filter" value="luxury"> 최고급 어메니티제공</label>
+
+<br><br>
+  <button onclick="showFilteredRooms()">🔍 찾기</button>
+
+
+  <!-- 아래 체크 박스 선택 되는거를 리스트로 띄우고 싶음.-->
+
+  <div id="roomList"></div>
+  <script>
+    const types = ["best","cctv","fun","health","luxury"];
+    const rooms= [];
+
+    for (let i=1; i<=30;i++) { 
+
+        
+
+    }
+  </script>
+
+
 </body>
 </html>
