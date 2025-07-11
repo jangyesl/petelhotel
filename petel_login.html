@@ -50,7 +50,9 @@
     }
 
     .btn-sub {
+      display: block;
       display: inline-block;
+      width: 150px; 
       padding: 8px 18px;
       background-color: #806c6c;
       color: #fff;
@@ -62,21 +64,12 @@
       text-align: center;
       border: none;
       cursor: pointer;
-      width: 100%;
+      
       margin-bottom: 10px;
     }
 
     .btn-sub:hover {
       background-color: #dba5a5;
-    }
-
-    .btn-link {
-      background: none;
-      border: none;
-      color: #806c6c;
-      cursor: pointer;
-      font-size: 13px;
-      text-decoration: underline;
     }
 
  
@@ -93,12 +86,34 @@
       <label for="userPw"> 비밀번호</label>
       <input type="password" id="userPw" name="userPw" required>
 
-      <button type="submit" class="btn-sub">로그인</button>
+      
+      <a href="petel_main.html" class="btn-sub">로그인</a>
     </form>
 
     <!-- 회원가입 버튼 -->
     <a href="petel_membership.html" class="btn-link">아직 회원이 아니신가요? 회원가입하기</a>
   </div>
+ 
+
+
+<!-- <script> 
+  document.getElementById('loginForm').addEventListener('submit', function (e) {
+    e.preventDefault(); // 폼 기본 제출 막기
+
+    const username = document.getElementById('username').value.trim();
+    const password = document.getElementById('password').value.trim();
+
+    // 간단한 예시: ID/PW가 비어 있지 않으면 이동
+    if (username !== "" && password !== "") {
+      // 여기에 실제 로그인 로직이 들어가야 함 (백엔드 연동 등)
+      // 예시로 그냥 바로 이동
+      window.location.href = "petel_main.html";
+    } else {
+      alert("아이디와 비밀번호를 모두 입력하세요.");
+    }
+  });
+</script> -->
+
 
 </body>
 </html>

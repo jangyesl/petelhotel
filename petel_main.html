@@ -57,27 +57,48 @@
     background-color: #dba5a5;
 }
 
-.intro-split-section{
+.intro-split-section,
+.intro2-split-section {
     display: flex; /*가로정렬*/
-
-    width: 500px;
-    height: 200px;
+    width: 100vw;
     border-radius: 5px;
-    padding: 50px;
-     
-    font-size: 14px;
+    padding: 80px 60px;     /* 좌우 여백 살짝 줄이고 상하 넉넉하게 */ 
     font-weight: 500;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;     /* 텍스트 세로 가운데 정렬 */
+
+}
+.intro-split-section h2,
+.intro2-split-section h2,
+.h1 {
+    font-size: 36px;
+    color: #cd4c4c;
+}
+.intro-split-section p,
+.intro2-split-section p{
+    font-size: 36px;
+    font-size: 20px; 
+}
+.btn-sub {
+  font-size: 16px;       /* 버튼 글씨 크게 */
+  padding: 12px 24px;   
+}
+.text-box{
+width: 50%;
+object-fit: cover;
+}
+.image-box{
+width: 50%;
+object-fit: cover; /*비율유지*/
+}
+.image-box img {
+  width: 70%; /* 기존보다 조금 더 크게 */
+  height: auto;                   /* 비율 유지 */
+  border-radius: 20px;            /* 둥근 모서리 */
+  object-fit: cover;              /* 잘리지 않게 비율 유지 */
 }
 
-.intro2-split-section{
-    width: 500px;
-    height: 200px;
-    border-radius: 5px;
-    padding: 50px;
-    display: flex;
-    font-size: 14px;
-    font-weight: 500;
-}
 
 .review-wrapper {
   display: flex;
@@ -85,7 +106,8 @@
 }
 /* 왼쪽 큰 후기 카드 */
 .review-big {
-  width: 60%;
+  width: 50%;
+  height: auto; /*높이를 자동으로*/
 }
 .review-big img {
   width: 100%;
@@ -94,25 +116,64 @@
 }
 /* 오른쪽 두 개 쌓는 카드 */
 .review-small-column {
-  width: 40%;
+  width: 50%;  
   display: flex;
-  flex-direction: column;
+  flex-direction: column;  /*세로로 쌓는 이미지 명령어*/
   gap: 20px;
 }
 
 .review-small img {
   width: 100%;
+  height: 300px;  /*이미지 크기 조절함 ㄴㅇㅅ*/
   border-radius: 40px;
   object-fit: cover;
 }
 .review figcaption {
   margin-top: 8px;
-  font-size: 14px;
-  color: #333;
+  font-size: 30px;
+  color: #9d5858;
 }
 
+/*마우스를 올렸을때 후기 이미지가 텍스트로 뜨는 css스크립트 필요 없음*/
+/* figure를 겹치기 위한 기본 구조로 설정 */
+figure {  /*공식처럼 쓰이는 패턴*/
+  position: relative; /*자식 요소가 figure를 기준으로 위치하게끔*/
+  overflow: hidden; /*겹쳐진 텍스트가 figure 영역 밖으로 튀어나오지 않게 막아줌*/
+}
+
+
+/* 텍스트는 처음엔 숨김, 마우스 올리면 보임 */
+figure figcaption {
+  position: absolute;     /* figure 기준으로 겹쳐 배치 */
+  top: 0;                 /* 위쪽부터 시작 */
+  left: 0;                /* 왼쪽부터 시작 */
+  width: 100%;            /* 가로 전체 덮기 */
+  height: 100%;           /* 세로 전체 덮기 */
+  background-color: rgba(255, 255, 255, 0.95); /* 반투명 흰 배경 */
+  display: flex;          /* 안의 텍스트를 가운데 정렬하려고 flex 사용 */
+  justify-content: center;/* 가로 가운데 정렬 */
+  align-items: center;    /* 세로 가운데 정렬 */
+  color: #9d5858;         /* 텍스트 컬러 */
+  font-size: 24px;        /* 텍스트 크기 */
+  font-weight: bold;      /* 텍스트 굵게 */
+  text-align: center;     /* 여러 줄일 경우 가운데 정렬 */
+  opacity: 0;             /* 기본은 투명 (안보임) */
+  transition: opacity 0.3s ease; /* 나타날 때 부드럽게 */
+  padding: 20px;          /* 안쪽 여백 */
+  box-sizing: border-box; /* padding 포함한 사이즈 계산 */
+  border-radius: 10px;    /* 모서리 둥글게 */
+}
+/* 마우스를 올렸을 때 이미지 사라지고 텍스트 표시 */
+figure:hover img {
+  opacity: 0;
+}
+
+figure:hover figcaption {
+  opacity: 1;
+}
     </style>
 </head>
+
 <body>
     <header class ="main-banner">
        <!-- 배경으로 넣으려고 css로 ㄱ
@@ -152,7 +213,7 @@
 
 
     
-    <h2>안심 숙소 후기</h2>
+    <h1 class ="h1">  안심 숙소 후기</h1>
         <!--
         <div class="review">
             <img src="images/dog-review1.jpg" alt="리뷰1" />
@@ -186,5 +247,7 @@
   </div>
 </section>
     
+
+
 </body>
 </html>

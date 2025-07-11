@@ -3,97 +3,133 @@
 <head>
   <meta charset="UTF-8" />
   <title>몽몽이 회원가입</title>
-  
-<style>
-  body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #fff; /* 흰 배경 유지 */
-  }
+  <style>
+    * { box-sizing: border-box; }
 
-  .container {
-    padding: 40px;
-    border-radius: 16px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    width: 360px;
-  }
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f4;
+    }
 
-  h2 {
-    text-align: center;
-    margin-bottom: 24px;
-    color: #333;
-  }
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
-  label {
-    display: block;
-    margin: 12px 0 4px;
-    color: #444;
-    font-weight: bold;
-  }
+    .container {
+      max-width: 700px;
+      width: 100%;
+      background-color: white;
+      padding: 60px 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
 
-  input[type="text"],
-  input[type="number"],
-  input[type="password"],
-  select {
-    width: 100%;
-    padding: 10px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    margin-bottom: 14px;
-    box-sizing: border-box;
-  }
+    h2 {
+      text-align: center;
+      font-size: 40px;
+      margin-bottom: 40px;
+    }
 
-  .btn-sub {
-    display: inline-block;
-    padding: 8px 18px;
-    background-color: #806c6c;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 6px;
-    font-size: 14px;
-    font-weight: 500;
-    transition: background-color 0.2s ease;
-    text-align: center;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-  }
+    .form-group {
+      margin-bottom: 24px;
+    }
 
-  .btn-sub:hover {
-    background-color: #dba5a5;
-  }
-</style>
+    label {
+      display: block;
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 6px;
+      color: #333;
+    }
+
+    input {
+      width: 100%;
+      padding: 16px;
+      font-size: 18px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    .btn-sub {
+      width: 100%;
+      padding: 18px;
+      font-size: 18px;
+      background-color: #806c6c;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    .btn-sub:hover {
+      background-color: #dba5a5;
+    }
+  </style>
 </head>
 <body>
-  <!-- petel_membership.html -->
-<div class="container">
-  <h2>몽몽이 회원가입</h2>
-  <form action="signup_success.html">
-    <label for="dogName">🐾강아지 이름</label>
-    <input type="text" id="dogName" name="dogName" placeholder="예: 몽몽이" required>
+  <div class="container">
+    <h2> 회원가입 (script사용) </h2>
 
-    <label for="dogAge"> 나이 (개월수만 가능)</label>
-    <input type="number" id="dogAge" name="dogAge" placeholder="예: 24" required>
+    <div class="form-group">
+        <label for="dogName">🐾 강아지 이름</label>
+        <input type="text" id="dogName" placeholder="예: 두리" />
+    </div>
 
-    <label for="dogBreed">🐶 견종</label>
-    <input type="text" id="dogBreed" name="dogBreed" placeholder="예: 말티즈" required>
+    <div class="form-group">
+        <label for="dogAge">📅 나이 (개월수)</label>
+        <input type="number" id="dogAge" placeholder="예: 24" />
+    </div>
 
-    <label for="dogWeight">⚖️ 몸무게 (kg)</label>
-    <input type="number" id="dogWeight" name="dogWeight" step="0.1" placeholder="예: 3.2" required>
+    <div class="form-group">
+        <label for="dogBreed">🐶 견종</label>
+        <input type="text" id="dogBreed" placeholder="예: 포메" />
+    </div>
 
-    <label for="personName">👤 보호자 이름</label>
-    <input type="text" id="personName" name="personName" placeholder="예: 홍길동" required>
+    <div class="form-group">
+        <label for="dogWeight">⚖️ 몸무게 (kg)</label>
+        <input type="number" id="dogWeight" step="0.1" placeholder="예: 3.2" />
+    </div>
 
-    <label for="contact">📱 보호자 연락처</label>
-    <input type="text" id="contact" name="contact" placeholder="010-1234-5678" required>
+    <div class="form-group">
+        <label for="personName">👤 보호자 이름</label>
+        <input type="text" id="personName" placeholder="예: 홍길동" />
+    </div>
 
-    <button type="submit" class="btn-sub">가입하기</button>
-  </form>
-</div>
+    <div class="form-group">
+        <label for="contact">📱 보호자 연락처</label>
+        <input type="tel" id="contact" placeholder="010-1234-5678" />
+    </div>
+
+    <div class="form-group">
+        <label for="userPw">비밀번호</label>
+        <input type="password" id="userPw" name="userPw" required />
+    </div>
+    <button class="btn-sub" onclick="validateAndMove()">가입하기</button>
+  </div>
+
+  <script>
+    function validateAndMove() {
+      const name = document.getElementById("dogName").value.trim();
+      const age = document.getElementById("dogAge").value.trim();
+      const breed = document.getElementById("dogBreed").value.trim();
+      const weight = document.getElementById("dogWeight").value.trim();
+      const person = document.getElementById("personName").value.trim();
+      const contact = document.getElementById("contact").value.trim();
+
+      if (name && age && breed && weight && person && contact) {
+        // ✅ 조건 다 맞으면 하이퍼링크처럼 이동
+        window.location.href = "signup_success.html";
+      } else {
+        alert("모든 항목을 빠짐없이 입력해주세요!");
+      }
+    }
+  </script>
 </body>
 </html>

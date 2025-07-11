@@ -1,94 +1,11 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>펫텔 예약하기</title>
-  <style>
-    body {
-      font-family: sans-serif;
-      padding: 30px;
-    }
-    label {
-      margin-right: 15px;
-    }
-    .company-card {
-      border: 1px solid #ddd;
-      padding: 10px;
-      margin-bottom: 10px;
-      border-radius: 6px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 예약현황</title>
 </head>
 <body>
-
-  <h2>업체 유형 선택</h2>
-
-  <label><input type="checkbox" name="type" value="인기순"> 인기순</label>
-  <label><input type="checkbox" name="type" value="CCTV"> CCTV</label>
-  <label><input type="checkbox" name="type" value="펀룸"> 펀룸</label>
-  <label><input type="checkbox" name="type" value="헬스"> 헬스</label>
-  <label><input type="checkbox" name="type" value="럭셔리"> 럭셔리</label>
-
-  <div id="companyList"></div>
-
-  <script>
-    // 1. 업체 데이터 30개 예시
-    const companies = Array.from({ length: 30 }, (_, i) => {
-      const types = ["인기순", "CCTV", "펀룸", "헬스", "럭셔리"];
-      return {
-        name: `펫호텔 ${String.fromCharCode(65 + i)}`, // A, B, C...
-        type: types[i % types.length], // 반복 배치
-        price: 50000 + (i % 5) * 10000
-      };
-    });
-
-    const companyList = document.getElementById("companyList");
-    const checkboxes = document.querySelectorAll('input[name="type"]');
-
-    // 2. 체크박스 클릭 시 필터링 실행
-    checkboxes.forEach(cb => {
-      cb.addEventListener('change', filterAndRender);
-    });
-
-    function filterAndRender() {
-      const checkedTypes = Array.from(checkboxes)
-        .filter(cb => cb.checked)
-        .map(cb => cb.value);
-
-      let filtered = companies;
-
-      if (checkedTypes.length > 0) {
-        filtered = companies.filter(c => checkedTypes.includes(c.type));
-      }
-
-      // 가나다순 정렬 (이름 기준)
-      filtered.sort((a, b) => a.name.localeCompare(b.name));
-
-      render(filtered);
-    }
-
-    function render(list) {
-      companyList.innerHTML = "";
-      if (list.length === 0) {
-        companyList.innerHTML = "<p>선택된 업체가 없습니다.</p>";
-        return;
-      }
-
-      list.forEach(c => {
-        const div = document.createElement("div");
-        div.className = "company-card";
-        div.innerHTML = `
-          <strong>${c.name}</strong><br>
-          유형: ${c.type}<br>
-          가격: ${c.price.toLocaleString()}원
-        `;
-        companyList.appendChild(div);
-      });
-    }
-
-    // 3. 페이지 열자마자 전체 목록 보여주기
-    render(companies);
-  </script>
-
+    <h2> 예약현황 </h2>
 </body>
 </html>
