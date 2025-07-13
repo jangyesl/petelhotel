@@ -67,8 +67,8 @@
     box-sizing: border-box;
     justify-content: center;
     align-items: center;     /* 텍스트 세로 가운데 정렬 */
-
 }
+
 .intro-split-section h2,
 .intro2-split-section h2,
 .h1 {
@@ -80,18 +80,22 @@
     font-size: 10px;
     font-size: 15px; 
 }
+
 .btn-sub {
   font-size: 16px;       /* 버튼 글씨 크게 */
   padding: 12px 24px;   
 }
+
 .text-box{
 width: 50%;
 object-fit: cover;
 }
+
 .image-box{
 width: 50%;
 object-fit: cover; /*비율유지*/
 }
+
 .image-box img {
   width: 70%; /* 기존보다 조금 더 크게 */
   height: auto;                   /* 비율 유지 */
@@ -99,11 +103,11 @@ object-fit: cover; /*비율유지*/
   object-fit: cover;              /* 잘리지 않게 비율 유지 */
 }
 
-
 .review-wrapper {
   display: flex;
   gap: 20px;
 }
+
 /* 왼쪽 큰 후기 카드 */
 .review-big {
   width: 50%;
@@ -121,7 +125,6 @@ object-fit: cover; /*비율유지*/
   flex-direction: column;  /*세로로 쌓는 이미지 명령어*/
   gap: 20px;
 }
-
 .review-small img {
   width: 100%;
   height: 300px;  /*이미지 크기 조절함 ㄴㅇㅅ*/
@@ -133,15 +136,12 @@ object-fit: cover; /*비율유지*/
   font-size: 30px;
   color: #9d5858;
 }
-
 /*마우스를 올렸을때 후기 이미지가 텍스트로 뜨는 css스크립트 필요 없음*/
 /* figure를 겹치기 위한 기본 구조로 설정 */
 figure {  /*공식처럼 쓰이는 패턴*/
   position: relative; /*자식 요소가 figure를 기준으로 위치하게끔*/
   overflow: hidden; /*겹쳐진 텍스트가 figure 영역 밖으로 튀어나오지 않게 막아줌*/
 }
-
-
 /* 텍스트는 처음엔 숨김, 마우스 올리면 보임 */
 figure figcaption {
   position: absolute;     /* figure 기준으로 겹쳐 배치 */
@@ -167,11 +167,11 @@ figure figcaption {
 figure:hover img {
   opacity: 0;
 }
-
 figure:hover figcaption {
   opacity: 1;
 }
-    </style>
+</style>
+
 </head>
 
 <body>
@@ -196,8 +196,7 @@ figure:hover figcaption {
 
         <div class="image-box">
         <img src="images/banner-dog2.jpg" alt="호텔내부 사진"/>
-        </div>
-        
+        </div>        
     </section>
 
     <section class="intro2-split-section">
@@ -210,8 +209,6 @@ figure:hover figcaption {
         <a href ='reservation/best.html' class="btn-sub">인기순으로 예약하기</a>
         </div>       
     </section>
-
-
     
     <h1 class ="h1">  안심 숙소 후기</h1>
         <!--
@@ -220,7 +217,6 @@ figure:hover figcaption {
             <img src="images/dog-review2.jpg" alt="리뷰2" />
             <img src="images/dog-review3.jpg" alt="리뷰3" />         
         </div> -->
-
     <section class="review">
   
     <div class="review-wrapper">
@@ -228,7 +224,7 @@ figure:hover figcaption {
     <!-- 왼쪽: 큰 이미지 후기 -->
     <figure class="review-big">
       <img src="images/review1.jpg" alt="후기1">
-      <figcaption>진처럼 편안하게, 호텔처럼 안전하게.</figcaption>
+      <figcaption>집처럼 편안하게, 호텔처럼 안전하게.</figcaption>
     </figure>
 
     <!-- 오른쪽: 작은 이미지 후기 2개 -->
@@ -240,13 +236,12 @@ figure:hover figcaption {
 
       <figure class="review-small">
         <img src="images/review3.jpg" alt="후기3">
-        <figcaption>지난 일요일 호캉스 후기</figcaption>
+        <figcaption>지난 일요일 멍캉스 후기</figcaption>
       </figure>
     </div>
 
   </div>
-</section>
-    
+</section>   
 
 
 </body>
